@@ -1,0 +1,18 @@
+#!/bin/bash
+#Created by: 0xkuj
+
+FILES_DIR="/var/mobile/Documents/IPARanger"
+echo "Settings up permissions to the main files directory..."
+if [ ! -d $FILES_DIR  ];then 
+  mkdir $FILES_DIR
+fi
+chown -R 501:501 $FILES_DIR
+if [ $? -ne 0 ]; then
+  echo "Settings up permissions FAILED with exit status $?. this may cause unexpected behavior"
+else
+  echo "Settings up permissions is done!"
+  echo "Running uicache just in case the app wont appear.."
+  uicache -p /var/jb/Applications/IPARanger.app
+  echo "Created with <3 by 0xkuj"
+  echo "You are all set. Enjoy!"
+fi
