@@ -1,4 +1,4 @@
-Package: com.0xkuj.iparanger
+Package: com.0xkuj.iparanger.rootless
 Name: IPA Ranger
 Version: 1.5
 Architecture: iphoneos-arm64
